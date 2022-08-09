@@ -78,8 +78,13 @@ getCharacterButton.addEventListener('click', () => {
 
 loadMoreCharactersButton.addEventListener('click', () => {
    const characters = getDataFromStorage<ICharacter>('characters')!;
-    characters.length >= sliceTo + 5 ? sliceTo += 5 : sliceTo = characters.length;
-    if (characters.length >= 5) {
+   characters.length >= sliceTo + 5 ? sliceTo += 5 : sliceTo = characters.length;
+   console.log(container.childElementCount);
+   console.log(characters.length);
+   if (container.childElementCount === characters.length) {
+       loadMoreCharactersButton.classList.remove('active');
+   }
+   if (characters.length >= 5) {
         renderCharacters(
          container,
          characters.slice(0, sliceTo),
