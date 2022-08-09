@@ -1,0 +1,38 @@
+.footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 10vh;
+
+  &__text {
+    font-family: 'Work Sans', sans-serif;;
+    font-size: 24px;
+    font-weight: 200;
+    text-align: center;
+
+    & span {
+      color: #007ACC;
+      font-weight: 400;
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .footer__text {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .footer__text {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .footer__text {
+    font-size: 10px;
+  }
+}

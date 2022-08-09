@@ -1,0 +1,74 @@
+.header {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  height: 20vh;
+  width: 100vw;
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    margin-left: 20px;
+    min-width: 30%;
+  }
+
+  &__title {
+    color: white;
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-size: 80px;
+  }
+
+  &__brand img {
+    width: auto;
+    height: 90%;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px;
+    margin-left: 20px;
+    height: 100%;
+  }
+
+  &__nav img {
+    width: 40px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .header__title {
+    font-size: 50px;
+  }
+
+  .header__brand img {
+    height: 70%;
+  }
+}
+
+@media screen and (max-width: 505px) {
+  .header {
+    height: 15vh;
+
+    &__title {
+      font-size: 30px;
+    }
+
+    &__brand img {
+      height: 70%;
+    }
+
+    &__nav a:first-of-type,
+    &__nav a:nth-of-type(2) {
+      display: none;
+    }
+
+    &__nav a:nth-of-type(3) {
+      padding-top: 10px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Work+Sans:wght@100;200;300;400&display=swap');
+@import "headerSection";
+@import "mainSection";
+@import "footerSection";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

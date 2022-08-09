@@ -1,0 +1,154 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  min-height: 70vh;
+
+  .input-field {
+    background-color: red;
+    display: flex;
+    width: 70%;
+    min-height: 50px;
+    height: 50%;
+    margin: 50px 0 0;
+
+    input {
+      border: 1px solid black;
+      width: 70%;
+      min-height: 100%;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 24px;
+      padding: 0 10px;
+    }
+    
+
+    button {
+      background-color: black;
+      border: none;
+      color: #FFFFFF;
+      width: 30%;
+      min-height: 100%;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 24px;
+    }
+  }
+}
+
+.characters-container {
+  margin: 50px 0;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.character {
+  border: 1px solid black;
+  font-family: 'Work Sans', sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 5px;
+  position: relative;
+}
+
+.img-container {
+  border-right: 1px solid black;
+
+  & img {
+    border-radius: 50%;
+    border: 1px solid black;
+    margin: 5px;
+    width: auto;
+    height: 150px;
+  }
+}
+
+.character__description {
+  margin: 0 15px;
+
+  & .info {
+    text-transform: uppercase;
+    color: gray;
+  }
+
+  & h4 {
+    font-size: larger;
+  }
+}
+
+.clear {
+  cursor: pointer;
+}
+
+.delete {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border: none;
+  padding: 10px 15px;
+  position: absolute;
+  right: 5px;
+}
+
+.btn-more-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  margin-bottom: 50px;
+
+  .more {
+    background-color: black;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
+    padding: 20px 40px;
+  }
+
+  .more.active {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .main .input-field .load,
+  .main .input-field .input-id,
+  .main .input-field .clear {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main .input-field .clear,
+  .main .input-field .load {
+    font-size: 15px;
+    padding: 5px 10px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main .input-field .load,
+  .main .input-field .input-id,
+  .main .input-field .clear {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .main .character {
+    font-size: smaller;
+  }
+
+  .main .character .delete {
+    top: 5px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main .character .delete {
+    padding: 5px 10px;
+  }
+}
